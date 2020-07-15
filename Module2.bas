@@ -21,14 +21,14 @@ Sub SendShiftEmail()
     If MyTime < TimeValue("13:00:00 am") Then
         With NewMail
             .Subject = "Shift Start " & (Date)
-        .To = "exemplaryEmail@exemplary.com"
+            .To = "exemplaryEmail@exemplary.com"
             .Body = "Dear Team," & vbCrLf & vbCrLf & "As of " & (MyDate) & " the shift has started at: " & MyTime & vbCrLf & vbCrLf & "Kind regards" & vbCrLf & signature
             .Display
         End With
     ElseIf MyTime > TimeValue("16:00:00 am") Then
         With NewMail
             .Subject = "Shift End " & (Date)
-            .To = "awsho.pl@capgemini.com"
+            .To = "exemplaryEmail@exemplary.com"
             .Body = "Dear Team," & vbCrLf & vbCrLf & "As of " & (MyDate) & " the shift has ënded at: " & MyTime & " am" & vbCrLf & "Kind regards" & vbCrLf & signature
             .Display
         End With
